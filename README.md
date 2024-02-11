@@ -5,7 +5,7 @@ En este proyecto se creo un ecomerce usanda react.
 
 <DEPENDENCIAS>
 
-# MaterialUi
+# MaterialUi.
 
 npm install @mui/material @emotion/react @emotion/styled
 
