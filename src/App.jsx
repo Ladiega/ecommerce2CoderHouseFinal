@@ -7,6 +7,8 @@ import HomePage from "./pages/HomePage/HomePage"
 // import Pinturas from "./pages/Pinturas/Pinturas";
 import Merch from "./pages/Merch/Merch";
 import ErrorPage from "./pages/ErrorPage/ErrorPage"
+import ItemDetailTest from "./pages/ItemDetailTest/ItmeDetailTest";
+// import ItemDetail from "./components/ItemDetail/ItemDetail";
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/Merch" element={<Merch />} />
         <Route path="*" element={<ErrorPage />} />
-     
+        <Route path="/Detail/:id" element={ <ItemDetailTest/>} />
       </Routes>
 
     </Router>

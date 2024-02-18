@@ -4,12 +4,12 @@ import CardItemsTest from "../CardItemsTest/CardItemsTest";
 import { db } from "../../firebase/firebase"
 import { collection, query, getDocs, where} from "firebase/firestore"
 
-
+import { Link } from "react-router-dom";
 
 export default function TestComponent() {
   const [itemsData, setItemsData] = useState([]);
 
-  useState(() => {
+  useEffect(() => {
     const getItems  = async () => {
       const q = query(
         collection(db, 'items')
@@ -30,9 +30,11 @@ export default function TestComponent() {
   return (
     <div className="grid_items">
       
-      {itemsData.map((items) => {
+      {itemsData.map((items) => { 
         return (
-            <CardItemsTest itemsData={items} key={items.id}/>
+        <Link to={`/Detail/${items.id}`} key={items.id}>
+            <CardItemsTest itemsData={items} key={items.id} />
+          </Link>
         )
       })}
     
