@@ -7,9 +7,10 @@ export default function Navbar() {
     <nav className="nav_container" >
       <h3>Ecomerce</h3>
       <section>
-        <button><Link to="/Merch">Merch</Link></button>
+        {/* <button><Link to="/Merch">Merch</Link></button> */}
         <button><Link to="/Pinturas">Pinturas</Link></button>
         <button><Link to="/Grabados">Grabados</Link></button>  
+        <button><Link to="/Shop">Shop</Link></button>  
         <NavLink to={`/category/pintura`} />
         <NavLink to={`/category/grabado`} />
       </section>
